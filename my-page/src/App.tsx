@@ -1,12 +1,9 @@
-import { type } from '@testing-library/user-event/dist/type';
 import './intro.json';
-//import './App.css';
+import './App.css';
 import info from "./intro.json";
 
-
-
 const App = () => (
-    <div className="App" style={{padding:"5px"}}>
+    <div className="App">
       <h1 style={{textAlign: "center"}}>About me</h1>
       <h3>name:</h3>
       <p>&emsp;{info.name}</p>
@@ -14,19 +11,16 @@ const App = () => (
       <h3>Short desc:</h3>
       <DescArticle />
       <br />
-      <h3>Contacts: {info.contacts}</h3>
-
-      
+      <h3>Contacts: <del>{info.contacts}</del></h3>
+      <p className="OVERWRITE">&emsp;<b>XXX XXX XX XX</b></p>
     </div>
   );
 
 const DescArticle = () => (
-
   <div>
-    <p>&emsp;{info.bio[0]}</p>
-    <p>&emsp;{info.bio[1]}</p>
-    <p>&emsp;{info.bio[2]}</p>
-    <p>&emsp;{info.bio[3]}</p>
+    {info.bio.map((line, i) => (
+      <p>&emsp;{line}</p>
+    ))}
   </div>
 )
 

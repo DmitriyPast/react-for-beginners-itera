@@ -1,4 +1,12 @@
 .App {
+  padding: 5px;
+}
+.OVERWRITE {
+  color:darkviolet
+}
+/*Obsolete default crap goes down here*/
+/*
+.App {
   text-align: center;
 }
 
@@ -36,3 +44,4 @@
     transform: rotate(360deg);
   }
 }
+*/
