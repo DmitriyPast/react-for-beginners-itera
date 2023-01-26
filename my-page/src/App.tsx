@@ -4,7 +4,7 @@ import info from "./intro.json";
 
 const App = () => (
     <div className="App">
-      <h1 style={{textAlign: "center"}}>About me</h1>
+      <h1 className="header">About me</h1>
       <h3>name:</h3>
       <p>&emsp;{info.name}</p>
       <br />

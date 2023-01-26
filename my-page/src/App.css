@@ -1,6 +1,9 @@
 .App {
   padding: 5px;
 }
+.header {
+  text-align: center;
+}
 .OVERWRITE {
   color:darkviolet
 }
