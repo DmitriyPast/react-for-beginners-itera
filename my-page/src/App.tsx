@@ -17,11 +17,11 @@ const App = () => (
   );
 
 const DescArticle = () => (
-  <div>
+  <>
     {info.bio.map((line, i) => (
       <p>&emsp;{line}</p>
     ))}
-  </div>
+  </>
 )
 
 export default App;
