@@ -1,4 +1,4 @@
-import { PureComponent, useState } from "react";
+import { PureComponent, useCallback, useState } from "react";
 
 type WithCallback = { callback: () => void };
 
@@ -9,7 +9,7 @@ class ExpensiveComponent extends PureComponent<WithCallback> {
       i++;
     }
     const { callback } = this.props;
-    return <button onClick={callback}>Expensive</button>;
+    return <button onClick={callback}>Expensive af</button>;
   }
 
   componentDidUpdate() {
@@ -20,8 +20,8 @@ class ExpensiveComponent extends PureComponent<WithCallback> {
 const App = () => {
   const [state, setState] = useState(0);
   const increment = () => setState(state + 1);
-  const callback = () => console.log("callback!");
-  // const callback = useCallback(() => console.log("callback!"), []);
+  // const callback = () => console.log("callback!");
+  const callback = useCallback(() => console.log("callback!"), []);
   return (
     <>
       <ExpensiveComponent callback={callback} />

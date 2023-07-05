@@ -4,11 +4,11 @@ import { authorData, AuthorDataContext } from "./context";
 
 const Main = () => (
   <main>
-    <h1>Hello, this is my blog page</h1>
+    <h1>Hell, this is Muye log paeg</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, rerum sint
-      obcaecati corporis perferendis amet esse nemo quos repellendus magnam ipsa
-      aliquid tempora dolorum mollitia quasi possimus nulla, velit modi?
+      Lore ipsum dolor sit amet consectetur a dipisicing elit. Natus Vincere, <b><code>return</code></b> sins
+      obfusscati corporis perferendis a meth esse Nemo quos repellen dus magnum ipsa
+      a liquid tempora dolorum mollitia quasi possimus nulla, velit modi?
     </p>
 
     <Contacts />
@@ -18,7 +18,7 @@ const Footer: FC<{ author: string }> = ({ author }) => {
   const year = new Date().getFullYear();
   return (
     <footer>
-      By {author}. (C) {year}
+      By {author}. (C)ock {year}
     </footer>
   );
 };
@@ -27,9 +27,12 @@ const App = () => {
   const { authorName } = authorData;
   return (
     <>
-      <AuthorDataContext.Provider value={authorData}>
+    <AuthorDataContext.Provider value={authorData}>
+      <Main />
+    </AuthorDataContext.Provider>
+      {/* <AuthorDataContext.Provider value={authorData}>
         <Main />
-      </AuthorDataContext.Provider>
+      </AuthorDataContext.Provider> */}
       <Footer author={authorName} />
     </>
   );

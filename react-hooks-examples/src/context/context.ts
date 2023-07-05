@@ -1,4 +1,4 @@
 import { createContext } from "react";
 
-export const authorData = { authorName: "drag13", twitter: "@drag137" };
+export const authorData = { authorName: "DimaLoser69", twitter: "@dontusethashit" };
 export const AuthorDataContext = createContext(authorData);

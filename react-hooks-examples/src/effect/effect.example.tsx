@@ -4,6 +4,7 @@ type CounterProps = { counter: number; onCount: () => void };
 const Counter: FC<CounterProps> = ({ counter, onCount }) => {
   useEffect(() => {
     console.log("Counter did change", counter);
+    // alert("Each f*ing time")///<alert gay=""> doesn't work either 
   });
 
   useEffect(() => {
@@ -13,6 +14,9 @@ const Counter: FC<CounterProps> = ({ counter, onCount }) => {
   useEffect(() => {
     return () => {
       console.log("Counter will be removed");
+      const ExpensiveAf = () => {
+        for (let i = 0; i < 1000_000_000; i++);
+      }
     };
   }, []);
 
