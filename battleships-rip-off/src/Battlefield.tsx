@@ -17,6 +17,7 @@ const cellStateMap: any = {
 };
 
 const Cell = ({ handleClick, value, x, y }: CellProps) => {
+  console.log('Cell component called');
   return (
     <button className="cell" onClick={() => handleClick(x, y)}>
       {cellStateMap[value]}
@@ -32,6 +33,7 @@ type BfProps = {
 
 export const BattleField = ({ matrix, onFire, disabled }: BfProps) => {
   const fire = disabled ? () => { } : onFire;
+  console.log('Battlefield component called');
   return (
     <div className={`${disabled ? 'disabled' : ''}`}>
       {matrix.map((line, row) => (

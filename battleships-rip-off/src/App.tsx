@@ -7,20 +7,14 @@ import { Nonsense } from './fs';
 
 import './App.css'
 
-
-
-
-
-
-
-
-
 export default function App() {
   const { turn, reset, matrix, fire, win } = useGameState();
-  
-  if (win) {
-    alert("Win");
-  }
+
+  useEffect(() => {
+    if (win) {
+      setTimeout(() => alert("Win"), 0);
+    }
+  }, [win]);
 
   const onFire = (x: number, y: number) => console.log(x, y);
   return (

@@ -19,10 +19,6 @@ const CreateBattlefield = () => {
     return emptyBattlefield;
 };
 
-
-
-
-
 export const useGameState = () => {
     //const turn = 0;
     const [state, setState] = useState({
@@ -47,7 +43,7 @@ export const useGameState = () => {
 
         const cellStateNew = cell === cellState.WATER ? cellState.HIT_WATER : cellState.HIT_SHIP;
         state.matrix[y][x] = cellStateNew;
-        const win = state.matrix.every((row) => row.every((v) => v !== cellState.SHIP));
+        const win = state.matrix.every((line) => line.every((val) => val !== cellState.SHIP));
 
         setState({ ...state, turn: state.turn + 1, win });
     };
