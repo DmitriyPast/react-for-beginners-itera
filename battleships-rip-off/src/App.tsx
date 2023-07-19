@@ -12,7 +12,7 @@ export default function App() {
 
   useEffect(() => {
     if (win) {
-      setTimeout(() => alert("Win"), 0);
+      setTimeout(() => alert("Russian Warship\nGo fuck yourself!!"), 0);
     }
   }, [win]);
 
