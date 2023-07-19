@@ -1,0 +1,1 @@
+export const TurnCounter = ({ turn }: { turn: number }) => (<h2>Turn: {turn}</h2>);
