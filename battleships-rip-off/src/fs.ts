@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 const TXT = "Tpeба потопити корабель"
-export const Nonsense = () => {
+export const Nonsense = memo(() => {
   const [state, setText] = useState({
     n: 1,
     text: TXT,
   });
+  console.log('T.U.R.D.');
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -17,4 +18,4 @@ export const Nonsense = () => {
   }, [state]);
 
   return state.text;
-};
+});

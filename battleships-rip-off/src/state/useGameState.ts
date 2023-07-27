@@ -44,8 +44,9 @@ export const useGameState = () => {
         const cellStateNew = cell === cellState.WATER ? cellState.HIT_WATER : cellState.HIT_SHIP;
         state.matrix[y][x] = cellStateNew;
         const win = state.matrix.every((line) => line.every((val) => val !== cellState.SHIP));
-
-        setState({ ...state, turn: state.turn + 1, win });
+        
+        state.turn += 1;
+        setState({ ...state, turn: state.turn, win });
     };
 
     const { turn, matrix, win } = state;

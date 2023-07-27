@@ -1,4 +1,5 @@
 // import { HIT_SHIP, HIT_WATER, SHIP, WATER } from './state/cellstate';
+import { memo } from 'react';
 import { cellState } from './state/cellstate';
 import { useGameState } from './state/useGameState';
 
@@ -16,14 +17,16 @@ const cellStateMap: any = {
   [cellState.HIT_SHIP]: '🔥'
 };
 
-const Cell = ({ handleClick, value, x, y }: CellProps) => {
+export const Cell = memo(({ handleClick, value, x, y }: CellProps) => {
   console.log('Cell component called');
+
+
   return (
     <button className="cell" onClick={() => handleClick(x, y)}>
       {cellStateMap[value]}
     </button>
   );
-};
+});
 
 type BfProps = {
   matrix: number[][];

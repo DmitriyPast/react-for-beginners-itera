@@ -1,1 +1,4 @@
-export const TurnCounter = ({ turn }: { turn: number }) => (<h2>Turn: {turn}</h2>);
+export const TurnCounter = ({ turn }: { turn: number }) => {
+    console.log('TurnCounter rendered');
+    return(<h2>Turn: {turn}</h2>)
+};
